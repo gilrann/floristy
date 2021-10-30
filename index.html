@@ -20,7 +20,7 @@
                     <div class="header__logo">Весна всегда</div>
                 </a>
                 <a href="#">
-                    <nav class="header__menu">Меню</nav>
+                    <div class="header__burger">Меню</div>
                 </a>
             </div>
             <div class="header__center">
@@ -66,7 +66,7 @@
             <span class="services__backtitle">Каталог услуг</span>
             <ul class="services__list">
                 <li class="services__item">
-                    <a href="#" class="services__card">
+                    <a href="#" class="services__card" id="wedding">
                         <div class="card__shell">
                             <img src="img/m-large.jpg" alt="" class="card__image">
                             <div class="card__field c01">
@@ -83,7 +83,7 @@
                     </a>
                 </li>
                 <li class="services__item">
-                    <a href="#" class="services__card">
+                    <a href="#" class="services__card" id="celebration">
                         <div class="card__shell">
                             <img src="img/f-large.jpg" alt="" class="card__image">
                             <div class="card__field c02">
@@ -100,7 +100,7 @@
                     </a>
                 </li>
                 <li class="services__item">
-                    <a href="#" class="services__card">
+                    <a href="#" class="services__card" id="composition">
                         <div class="card__shell">
                             <img src="img/c-large.jpg" alt="" class="card__image">
                             <div class="card__field c03">
@@ -117,7 +117,7 @@
                     </a>
                 </li>
                 <li class="services__item">
-                    <a href="#" class="services__card">
+                    <a href="#" class="services__card" id="event">
                         <div class="card__shell">
                             <img src="img/e-large.jpg" alt="" class="card__image">
                             <div class="card__field c04">
@@ -146,6 +146,22 @@
             <div class="promo__part promo__image">
                 <img src="img/promo.jpg" alt="" class="promo__pic">
             </div>
+            <!----------------------------------------------------- POPUP BLOCK -->
+            <div class="promo__popup">
+                <img src="img/popup.jpg" alt="" class="popup__pic">
+                <form action="" class="popup__form" method="post" name="promo__form">
+                    <legend class="popup__legend">Оставьте свой<br> номер и мы вам<br> перезвоним!</legend>
+                    <input type="text" name="username" placeholder="Имя" class="popup__field">
+                    <input type="tel" name="userphone" placeholder="Телефон" class="popup__field">
+                    <button type="submit" class="btn popup__submit" value="psubm">Позвоните мне</button>
+                </form>
+                <div class="popup__close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29 29L1 1M1 29L29 1L1 29Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <!-------------------------------------------------- POPUP BLOCK END -->
         </section>
     </main>
     <footer class="floristy__footer">
@@ -183,6 +199,123 @@
             </ul>
         </div>
     </footer>
+    <!------------------------------------------------------- HEADER MENU BLOCK -->
+    <nav class="header__menu">
+        <div class="menu__wrapper">
+            <div class="header__logo">Весна всегда</div>
+            <ul class="menu__list">
+                <a href="#" class="menu__link">
+                    <li class="menu__item">Свадебная флористика</li>
+                </a>
+                <a href="#" class="menu__link">
+                    <li class="menu__item">Букеты на любые мероприятия</li>
+                </a>
+                <a href="#" class="menu__link">
+                    <li class="menu__item">Композиции</li>
+                </a>
+                <a href="#" class="menu__link">
+                    <li class="menu__item">Оформление мероприятий</li>
+                </a>
+            </ul>
+        </div>
+        <div class="header__social">
+            <ul class="social__list">
+                <a href="#">
+                    <li class="social__item social__item--instagram">
+                        <span>instagram</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="social__item social__item--facebook">
+                        <span>facebook</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="social__item social__item--whatsapp">
+                        <span>whatsapp</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="social__item social__item--vkontakte">
+                        <span>vkontakte</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="menu__close">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29 29L1 1M1 29L29 1L1 29Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </nav>
+    <!----------------------------------------------------- HEADER MENU BLOCK END -->
+    <!----------------------------------------------------- wedding  BLOCK --- -->
+    <div class="chapter wedding">
+        <div class="header__head">
+            <a href="#">
+                <div class="header__logo">Весна всегда</div>
+            </a>
+            <a href="#">
+                <div class="header__burger">Меню</div>
+            </a>
+        </div>
+        <div class="chapter__img">
+            <img src="img/wedding.jpg" alt="" class="chapter__pic wedding__pic">
+        </div>
+        <div class="chapter__description">
+            <div class="chapter__main">
+                <h2 class="chapter__title">Букеты невесты и свадебное оформление</h2>
+                <p class="chapter__text">
+                    Свадьба–самое важное событие в жизни молодожен. Поэтому каждый из будущих супругов хочет, чтобы на торжестве все было идеально. Наша компания превзойдет ваши ожидания по красоте,<br>
+                    качеству и лояльному ценнику. Обращаясь к нам, вы можете не переживать за оформление вашей свадьбы.
+                </p>
+                <button class="btn chapter__btn">
+                    Заказать
+                </button>
+                <div class="chapter__carousel wedding__carousel">
+                    <ul class="chapter__list">
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w01.jpg" alt="" class="wpic wpic01">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w02.jpg" alt="" class="wpic wpic02">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w03.jpg" alt="" class="wpic wpic03">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w04.jpg" alt="" class="wpic wpic04">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w05.jpg" alt="" class="wpic wpic05">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w06.jpg" alt="" class="wpic wpic06">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w07.jpg" alt="" class="wpic wpic07">
+                        </li>
+                        <li class="chapter__item wedding__item">
+                            <img src="img/w08.jpg" alt="" class="wpic wpic08">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="chapter__footer">
+            <span class="chapter__more">Больше фотографий в профиле</span>
+            <a class="social__link" href="#">
+                <div class="social__item social__item--instagram">
+                    <span>instagram</span>
+                </div>
+            </a>
+        </footer>
+    </div>
+    <!----------------------------------------------------- wedding  BLOCK END -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/floristy.js"></script>
 </body>
 
 </html>
