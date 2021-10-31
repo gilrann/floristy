@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slick/slick.css">
     <!--     <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -52,8 +53,8 @@
                     </a>
                 </ul>
             </div>
-            <div class="header__catalog">
-                <a href="#" class="catalog">
+            <div class="header__catalog ">
+                <a href="#" class="catalog header__scroll">
                     <img class="catalog__text" src="img/lookhere.png" alt="Смотреть каталог">
                 </a>
                 <img class="catalog__arrow" src="img/arrow.svg" alt="Указатель на каталог">
@@ -66,7 +67,7 @@
             <span class="services__backtitle">Каталог услуг</span>
             <ul class="services__list">
                 <li class="services__item">
-                    <a href="#" class="services__card wedding__start" id="wedding">
+                    <a href="wedding.html" class="services__card" id="wedding">
                         <div class="card__shell">
                             <img src="img/m-large.jpg" alt="" class="card__image">
                             <div class="card__field c01">
@@ -167,9 +168,9 @@
     <footer class="floristy__footer">
         <div class="footer__navigation">
             <ul class="navigation__list">
-                <li class="navigation__point wedding__start"><a href="#" class="navigation__link">Свадебная флористика</a></li>
+                <li class="navigation__point"><a href="wedding.html" class="navigation__link">Свадебная флористика</a></li>
                 <li class="navigation__point"><a href="#" class="navigation__link">Букеты на любые мероприятия</a></li>
-                <li class="navigation__point wedding__start"><a href="#" class="navigation__link">Букеты невесты</a></li>
+                <li class="navigation__point "><a href="wedding.html" class="navigation__link">Букеты невесты</a></li>
                 <li class="navigation__point"><a href="#" class="navigation__link">Композиции</a></li>
                 <li class="navigation__point"><a href="#" class="navigation__link">Оформление мероприятия</a></li>
             </ul>
@@ -205,7 +206,7 @@
             <div class="header__logo">Весна всегда</div>
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#" class="menu__link wedding__start">Свадебная флористика</a>
+                    <a href="wedding.html" class="menu__link">Свадебная флористика</a>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="menu__link">Букеты на любые мероприятия</a>
@@ -265,7 +266,7 @@
                     Заказать
                 </button>
                 <div class="chapter__carousel wedding__carousel">
-                    <ul class="chapter__list">
+                    <ul class="chapter__list" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
                         <li class="chapter__item wedding__item">
                             <img src="img/w01.jpg" alt="" class="wpic wpic01">
                         </li>

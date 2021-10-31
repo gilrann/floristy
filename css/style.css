@@ -7,6 +7,7 @@ html {
 body {
     margin: 0;
     background-color: rgba(59, 24, 30, 1.0);
+    position: relative;
 }
 
 ul,
@@ -115,6 +116,7 @@ h2 {
     background-size: 23px auto;
     background-position: center left;
     padding-left: 3.2rem;
+    cursor: pointer;
 }
 
 .header__center {
@@ -687,15 +689,12 @@ input:focus:-ms-input-placeholder {
 /*------------------------стилизация блока  "букеты невесты и свадебное оформление"*/
 
 .chapter {
-    position: fixed;
+    position: relative;
     width: 100vw;
     height: auto;
     background-color: #3b181e;
-    left: 0;
-    top: 0;
-    z-index: 90;
 
-    display: none;
+    display: flex;
     box-shadow: 0 100px 100px 100px #0007, 0 0 700px 700px #3b181edd;
     overflow: hidden;
 }
@@ -719,21 +718,24 @@ input:focus:-ms-input-placeholder {
     width: 100%;
 }
 
-.chapter__header {}
-
-.chapter .header__logo,
-.chapter .header__burger {
+.chapter__header {
     position: absolute;
-    top: 87px;
+    z-index: 100;
+}
+
+.chapter__header .header__logo,
+.chapter__header .header__burger {
+    position: absolute;
+    top: 8rem;
     z-index: 200;
 }
 
-.chapter .header__logo {
-    left: 95px;
+.chapter__header .header__logo {
+    left: 8rem;
 }
 
-.chapter .header__burger {
-    right: 95px;
+.chapter__header .header__burger {
+    right: 8rem;
 }
 
 .chapter__description {
@@ -766,6 +768,8 @@ input:focus:-ms-input-placeholder {
 
 .chapter__list {
     display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .chapter__footer {
@@ -788,5 +792,40 @@ input:focus:-ms-input-placeholder {
 }
 
 .chapter__pic {}
+
+.slick-arrow {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: rgba(255, 255, 255, 1.0) solid 1px;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+        flex-shrink: 0;    z-index: 100;
+    position: absolute;
+    color: transparent;
+}
+.slick-arrow:hover {
+    background-color: rgba(0, 0, 0, 1);
+   
+}
+.slick-prev {
+    background-image: url('../img/prev.svg');
+    background-repeat: no-repeat;
+    left: -23px;
+    background-position: center center;
+}
+
+.slick-next {
+    background-image: url('../img/next.svg');
+    background-repeat: no-repeat;
+    right: -8px;
+    background-position: center center;
+}
+
+.slick-slider {}
+
+.slick-disabled {
+    opacity: 0;
+    visibility: hidden;
+}
 
 /*----------заканчивается стилизация блока  "букеты невесты и свадебное оформление"*/
