@@ -799,14 +799,18 @@ input:focus:-ms-input-placeholder {
     border-radius: 50%;
     width: 46px;
     height: 46px;
-        flex-shrink: 0;    z-index: 100;
+    flex-shrink: 0;
+    z-index: 100;
     position: absolute;
     color: transparent;
+    cursor: pointer;
 }
+
 .slick-arrow:hover {
     background-color: rgba(0, 0, 0, 1);
-   
+
 }
+
 .slick-prev {
     background-image: url('../img/prev.svg');
     background-repeat: no-repeat;
