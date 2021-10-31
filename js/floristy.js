@@ -27,7 +27,72 @@ $(document).ready(function() {
             );
     });
 
+    $('.header__logo').click(function(event) {
+        // event.preventDefault();
+        // console.log("что это");
+
+        $('.header__menu')
+            .css('display', 'none')
+            .animate({
+                opacity: 0,
+            }, 200);
+
+    });
+
     // ---------------------------------END BURGER MENU
+    // ---------------------------------wedding block
+
+    $('.wedding__start').click(function(event) {
+        // event.preventDefault();
+        // console.log("что это");
+
+        $('.header__menu')
+            .css('display', 'none')
+            .animate({
+                opacity: 0,
+            }, 600);
+        $('.wedding')
+            .css('display', 'flex')
+            .animate({
+                opacity: 1,
+            }, 600);
+
+    });
+
+
+
+    $('#subburger').click(function(event) {
+        // event.preventDefault();
+        // console.log("что это");
+
+        $('.wedding')
+            .css('display', 'none')
+            .animate({
+                opacity: 0,
+            }, 600);
+
+        $('.header__menu')
+            .css('display', 'block')
+            .animate({
+                opacity: 1,
+            }, 600);
+    });
+
+    $('.header__logo').click(function(event) {
+        // event.preventDefault();
+        // console.log("что это");
+
+        $('.wedding')
+            .css('display', 'none')
+            .animate({
+                opacity: 0,
+            }, 200);
+
+    });
+
+
+    // ---------------------------------END wedding block
+
     // ---------------------------------popup block
 
     $('.promo__request').click(function(event) {
@@ -56,6 +121,17 @@ $(document).ready(function() {
             );
     });
     // ---------------------------------END popup block
+
+
+    // мышеклик
+    $(".header__scroll").click(function() {
+        // event.preventDefault();
+        // console.log("что это");
+        $("html, body").animate({ scrollTop: $(".header__head").height() + 932 }, "slow");
+
+        return false;
+    });
+    // конец мышеклика
 
 
 });

@@ -85,11 +85,13 @@ h2 {
 .header__head {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16rem;
-    position: absolute;
+    margin-bottom: 12rem;
+    position: relative;
+    width: 100%;
 }
 
-.header__head a {
+.header__head a,
+.chapter__header a {
     margin: 0;
     padding: 0;
 
@@ -105,6 +107,7 @@ h2 {
     background: url("../img/logo.svg") no-repeat;
     background-size: contain;
     padding-top: 2.2rem;
+    cursor: pointer;
 }
 
 .header__burger {
@@ -691,10 +694,10 @@ input:focus:-ms-input-placeholder {
     left: 0;
     top: 0;
     z-index: 90;
-    display: flex;
-    /*! justify-content: space-between; */
+
+    display: none;
     box-shadow: 0 100px 100px 100px #0007, 0 0 700px 700px #3b181edd;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 
@@ -702,6 +705,8 @@ input:focus:-ms-input-placeholder {
 
 .chapter__img {
     position: relative;
+    height: 932px;
+
 }
 
 .chapter__img::after {
@@ -714,9 +719,7 @@ input:focus:-ms-input-placeholder {
     width: 100%;
 }
 
-.chapter .header__head {
-    width: 100%;
-}
+.chapter__header {}
 
 .chapter .header__logo,
 .chapter .header__burger {
@@ -741,14 +744,12 @@ input:focus:-ms-input-placeholder {
     flex-shrink: 0;
     flex-grow: 0;
     margin-left: 9.5rem;
-    margin-top: 17.5rem;
+    margin-top: 14rem;
 }
 
 .chapter__main {
     width: 47rem;
 
-    flex-direction: column;
-    margin-bottom: 8.3rem;
 }
 
 .chapter__text {
@@ -760,7 +761,7 @@ input:focus:-ms-input-placeholder {
 .chapter__btn {
     background-color: transparent;
     flex-grow: 0;
-    margin-bottom: 8.3rem;
+    margin-bottom: 6rem;
 }
 
 .chapter__list {
@@ -786,8 +787,6 @@ input:focus:-ms-input-placeholder {
     font-size: 1.5rem;
 }
 
-.chapter__pic {
-    height: 100%;
-}
+.chapter__pic {}
 
 /*----------заканчивается стилизация блока  "букеты невесты и свадебное оформление"*/
