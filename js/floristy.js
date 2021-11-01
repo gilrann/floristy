@@ -139,4 +139,22 @@ $(document).ready(function() {
     });
     // конец карусельки
 
+    // каруселька каталога
+
+    $('.services__list').slick({
+        arrows: false,
+        dots: true,
+
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        // variableWidth: true,
+        mobileFirst: true,
+        responsive: [{
+            breakpoint: 1500,
+            settings: 'unslick'
+        }]
+    });
+    // конец карусельки каталога
+
+
 });
