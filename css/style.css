@@ -9,7 +9,7 @@ body {
     background-color: rgba(59, 24, 30, 1.0);
     position: relative;
 }
- 
+
 ul,
 h1,
 h2,
@@ -59,12 +59,11 @@ h2 {
     margin: 0;
     padding: 0;
 
-    font-size: 4.17rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.09rem;
+    letter-spacing: 0.06rem;
     cursor: default;
     margin-bottom: 4rem;
-    width: 90%;
 }
 
 /*-------------------------------------------HEADER----------------------------*/
@@ -152,6 +151,10 @@ h2 {
     cursor: pointer;
 }
 
+.arrowdown {
+    display: none;
+}
+
 .header__social {
     position: absolute;
     left: 0;
@@ -177,6 +180,7 @@ h2 {
     height: 25px;
     margin-bottom: 25px;
     background-size: contain;
+    cursor: pointer;
 }
 
 .social__item span {
@@ -241,15 +245,10 @@ h2 {
     position: relative;
 }
 
-.promo {
-    width: 64%;
-}
+
 
 .section__title {
-    text-transform: uppercase;
     text-decoration: none;
-    font-size: 2.5rem;
-    letter-spacing: 0.06rem;
     position: relative;
     margin-bottom: 8.5rem;
     line-height: 170%;
@@ -297,6 +296,9 @@ h2 {
 
 
 /*CATALOG CARD START*/
+
+.services__item {}
+
 .services__card {
     margin: 0;
     padding: 0;
@@ -314,6 +316,10 @@ h2 {
     padding: 10px;
     display: flex;
     border: solid transparent 1px;
+}
+
+.services__card .card__image {
+    box-shadow: 0 0 0 8px rgba(59, 24, 30, 1.0), 0 0 0 10px transparent;
 }
 
 .card__field {
@@ -368,8 +374,8 @@ h2 {
 
 
 /*CATALOG CARD HOVER START*/
-.services__card:hover .card__shell {
-    border: solid rgba(255, 255, 255, 0.2) 1px;
+.services__card:hover .card__image {
+    box-shadow: 0 0 0 8px rgba(59, 24, 30, 1.0), 0 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .services__card:hover .number__digital {
@@ -386,6 +392,7 @@ h2 {
 /*CATALOG CARD HOVER END*/
 
 .promo {
+    width: 64%;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -399,6 +406,14 @@ h2 {
 .promo__text {
     width: 40%;
     align-self: center;
+}
+
+.promo__image {
+    width: 57%;
+}
+
+.promo__pic {
+    width: 100%;
 }
 
 .promo__suggestion {
@@ -686,7 +701,7 @@ input:focus:-ms-input-placeholder {
 
 
 
-/*------------------------стилизация блока  "букеты невесты и свадебное оформление"*/
+/*------------------------стилизация блока  "страница каталога"*/
 
 .chapter {
     position: relative;
@@ -832,4 +847,129 @@ input:focus:-ms-input-placeholder {
     visibility: hidden;
 }
 
-/*----------заканчивается стилизация блока  "букеты невесты и свадебное оформление"*/
+/*----------заканчивается стилизация блока  "страница каталога"*/
+
+/*------------------------------------------коррекция десктопа*/
+@media (max-width: 1500px) {
+    .services__list {
+        flex-direction: column;
+    }
+
+    .services__card {
+        width: 27.5rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .slick-dots button {
+        color: transparent;
+        width: 6.2rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: transparent;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        height: 2px;
+        cursor: pointer;
+    }
+
+    .slick-active button {
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/*--------------------------------------end коррекция десктопа*/
+
+/*------------------------------------------еще коррекция*/
+@media (max-width: 900px) {
+    .services {
+        width: 100%;
+    }
+}
+
+/*-------------------------------------end--коррекции*/
+/*------------------------------------------планшет*/
+@media (max-width: 768px) {
+    .floristy__header {
+        background: url(../img/headerback.jpg) no-repeat center top / cover;
+        padding-top: 55px;
+        padding-bottom: 115px;
+        margin-bottom: 8rem;
+    }
+
+    .header__burger {
+        color: transparent;
+        background-position-x: right;
+    }
+
+    .header__title {
+        font-size: 5.8rem;
+    }
+
+    .header__social {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__catalog {
+        display: none;
+    }
+
+    .social__list {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .social__item {
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        border-radius: 50%;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #3b181e;
+    }
+
+    .mouse {
+        display: none;
+    }
+
+    .arrowdown {
+        display: block;
+        background: url('../img/arrowdown.svg') no-repeat center;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        bottom: -3rem;
+    }
+
+    .services__backtitle {
+        display: none;
+    }
+
+    .services__title {
+        margin-bottom: 2.5rem;
+    }
+
+    .services__list {}
+
+    .services__card {}
+
+
+
+
+
+}
+
+/*-------------------------------------end--планшет*/
