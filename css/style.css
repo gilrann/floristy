@@ -127,8 +127,6 @@ h2 {
     align-items: center;
 }
 
-
-
 .header__portfolio {
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 1);
@@ -247,8 +245,6 @@ h2 {
     position: relative;
 }
 
-
-
 .section__title {
     text-decoration: none;
     position: relative;
@@ -298,8 +294,6 @@ h2 {
 
 
 /*CATALOG CARD START*/
-
-.services__item {/*! display: flex; */}
 
 .services__card {
     margin: 0;
@@ -372,10 +366,10 @@ h2 {
 }
 
 
-/*CATALOG CARD END*/
+/*------------------------------------------------------CATALOG CARD END*/
 
 
-/*CATALOG CARD HOVER START*/
+/*--------------------------------------------------CATALOG CARD HOVER START*/
 .services__card:hover .card__image {
     box-shadow: 0 0 0 8px rgba(59, 24, 30, 1.0), 0 0 0 10px rgba(255, 255, 255, 0.2);
 }
@@ -391,7 +385,7 @@ h2 {
 
 }
 
-/*CATALOG CARD HOVER END*/
+/*----------------------------------------------------CATALOG CARD HOVER END*/
 
 .promo {
     width: 64%;
@@ -434,6 +428,8 @@ h2 {
 .promo__request:hover {
     border-color: rgba(255, 255, 255, 1.0);
 }
+
+/*-------------------------------------------FOOTER----------------------------*/
 
 .floristy__footer {
     display: flex;
@@ -547,8 +543,6 @@ h2 {
     align-items: center;
 }
 
-.menu__link {}
-
 .menu__item {
     margin-bottom: 5rem;
 }
@@ -564,7 +558,6 @@ h2 {
     top: 95px;
     right: 95px;
     cursor: pointer;
-
 }
 
 .menu__close svg {
@@ -589,8 +582,6 @@ h2 {
     box-shadow: 0 0 700px 744px #505050dd;
     justify-content: space-between;
 }
-
-.popup__pic {}
 
 .popup__form {
     display: flex;
@@ -695,7 +686,6 @@ input:focus:-ms-input-placeholder {
     top: 22px;
     right: 24px;
     cursor: pointer;
-
 }
 
 .popup__close svg {
@@ -711,7 +701,7 @@ input:focus:-ms-input-placeholder {
 
 
 
-/*------------------------стилизация блока  "страница каталога"*/
+/*---------------------------------------------CHAPTER PAGE*/
 
 .chapter {
     position: relative;
@@ -720,7 +710,6 @@ input:focus:-ms-input-placeholder {
 
     display: flex;
     overflow: hidden;
-    /*! height: 100vh; */
 }
 
 .wedding__img {
@@ -729,17 +718,14 @@ input:focus:-ms-input-placeholder {
 
 .celebration__img {
     background: url('../img/celebration.jpg') no-repeat #ffffff4d;
-
 }
 
 .composition__img {
     background: url('../img/composition.jpg') no-repeat #ffffff4d;
-
 }
 
 .event__img {
     background: url('../img/event.jpg') no-repeat #ffffff4d;
-
 }
 
 .wedding {}
@@ -755,7 +741,6 @@ input:focus:-ms-input-placeholder {
 
     width: 50vw;
     height: 100vh;
-
 }
 
 .chapter__img::after {
@@ -766,7 +751,6 @@ input:focus:-ms-input-placeholder {
     border: 1px solid rgba(255, 255, 255, 0.2);
     height: 94%;
     width: 100%;
-    /*! z-index: 100; */
 }
 
 .chapter__header {
@@ -802,7 +786,6 @@ input:focus:-ms-input-placeholder {
 
 .chapter__main {
     width: 47rem;
-
 }
 
 .chapter__text {
@@ -842,8 +825,6 @@ input:focus:-ms-input-placeholder {
     font-size: 1.5rem;
 }
 
-.chapter__pic {}
-
 .slick-arrow {
     background-color: rgba(0, 0, 0, 0.4);
     border: rgba(255, 255, 255, 1.0) solid 1px;
@@ -859,7 +840,6 @@ input:focus:-ms-input-placeholder {
 
 .slick-arrow:hover {
     background-color: rgba(0, 0, 0, 1);
-
 }
 
 .slick-prev {
@@ -876,16 +856,14 @@ input:focus:-ms-input-placeholder {
     background-position: center center;
 }
 
-.slick-slider {}
-
 .slick-disabled {
     opacity: 0;
     visibility: hidden;
 }
 
-/*----------заканчивается стилизация блока  "страница каталога"*/
+/*-------------------------------------------------END CHAPTER PAGE*/
 
-/*------------------------------------------коррекция десктопа*/
+/*------------------------------------------MEDIA CORRECTOR 1500*/
 @media (max-width: 1500px) {
 
     .wedding__img {
@@ -958,7 +936,7 @@ input:focus:-ms-input-placeholder {
         background-color: rgba(255, 255, 255, 1);
     }
 
-    /*футер тоже страдает*/
+    /*----------------------------------------------FOOTER*/
     .floristy__footer {}
 
     .chapter__footer {
@@ -982,17 +960,14 @@ input:focus:-ms-input-placeholder {
 
     .footer__social {}
 
-    /*футер тоже страдал*/
-    /* ----------------------------and chapter */
+    /*------------------------------------------END FOOTER*/
+    /* -------------------------------------------CHAPTER */
     .chapter {
         flex-direction: column;
-        /*! height: 100vh; */
     }
 
     .chapter__img {
-        /*! width: 100vw; */
         height: auto;
-        /*! margin-bottom: 2rem; */
     }
 
     .chapter__description {
@@ -1022,18 +997,62 @@ input:focus:-ms-input-placeholder {
         background: url('../img/composition.jpg') no-repeat;
         background-size: cover;
         background-color: rgba(255, 255, 255, 0.3);
-        /*! opacity: 0.5; */
+    }
+
+    /*---------------------------------------------------END CHAPTER*/
+    /*-----------------------------------------------------POPUP*/
+    .promo__popup {
+        top: 5vh;
+        box-shadow: 0 0 5rem 5rem rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        height: 71vh;
+        position: fixed;
+        width: 32vw;
+        margin-left: -16%;
+    }
+
+    .popup__pic {
+        display: none;
+    }
+
+    .popup__form {
+        padding: 5.5rem 5vw;
+    }
+
+    .popup__legend {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .popup__field {}
+
+    input::placeholder {
+        font-size: 1.6rem;
+    }
+
+    .popup__submit {
+        margin-top: 3.5rem;
+    }
+
+    .popup__close svg {
+        width: 22px;
+        height: 22px;
     }
 }
 
-/*and chapter ending*/
+/*------------------------------------------END MEDIA CORRECTOR 1500*/
 
-}
-
-/*--------------------------------------end коррекция десктопа*/
-
-/**/
+/*------------------------------------------MEDIA CORRECTOR 1350*/
 @media (max-width: 1350px) {
+
+    .header__head {
+        margin-bottom: 8rem;
+    }
+
+    .header__portfolio {
+        margin-bottom: 8rem;
+    }
+
     .promo {
         flex-direction: column;
         align-items: center;
@@ -1063,16 +1082,13 @@ input:focus:-ms-input-placeholder {
         right: 0;
     }
 
-    .promo__suggestion {}
+
 }
 
-/**/
+/*------------------------------------------END MEDIA CORRECTOR 1350*/
 
-/*------------------------------------------планшет*/
-@media
-
-/*(orientation: landscape) and*/
-(max-width: 900px) {
+/*------------------------------------------MEDIA CORRECTOR 900*/
+@media (max-width: 900px) {
     .services {
         width: 100%;
     }
@@ -1144,14 +1160,6 @@ input:focus:-ms-input-placeholder {
         margin-bottom: 2.5rem;
     }
 
-    .services__list {}
-
-    .services__card {}
-
-    /*футер тоже страдает*/
-    .floristy__footer {}
-
-    .footer__navigation {}
 
     .navigation__list {
         flex-flow: column nowrap;
@@ -1162,18 +1170,25 @@ input:focus:-ms-input-placeholder {
         margin-bottom: 2rem;
     }
 
-    .navigation__link {}
-
-    .footer__social {}
-
-    /*футер тоже страдал*/
     .chapter__body {
         height: 100vh;
     }
+
+    .promo__popup {
+        top: 5vh;
+        height: 50vh;
+        width: 50vw;
+        margin-left: -25%;
+    }
+
+    .popup__form {
+        padding: 5.5rem 5vw;
+    }
+
 }
 
-/*-------------------------------------end--планшет*/
-/*------------------------------------------мобила*/
+/*------------------------------------------END MEDIA CORRECTOR 1350*/
+/*------------------------------------------MEDIA CORRECTOR 767*/
 @media (max-width: 767px) {
 
     .btn {
@@ -1265,8 +1280,6 @@ input:focus:-ms-input-placeholder {
         margin-bottom: 2.5rem;
     }
 
-    .services__list {}
-
     .services__card {
         align-self: center;
     }
@@ -1303,14 +1316,10 @@ input:focus:-ms-input-placeholder {
         width: 80%;
     }
 
-    .promo__request {}
 
-    /*футер тоже страдает*/
     .floristy__footer {
         width: 90%;
     }
-
-    .footer__navigation {}
 
     .navigation__list {
         flex-flow: column nowrap;
@@ -1322,8 +1331,6 @@ input:focus:-ms-input-placeholder {
         margin-bottom: 2rem;
     }
 
-    .navigation__link {}
-
     .footer__social {
         width: 100%;
     }
@@ -1332,26 +1339,19 @@ input:focus:-ms-input-placeholder {
         width: 100%;
         justify-content: space-evenly;
     }
-    .slick-initialized .slick-slide {
-        display:   flex;
-    }
 
-    /*футер тоже страдал*/
-    /*стилизация меню для мобил*/
-    .header__menu {}
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
 
     .menu__wrapper {
         width: 100%;
         padding-top: 3.5rem;
     }
 
-    .header__logo {}
-
     .menu__list {
         width: 55%;
     }
-
-    .menu__item {}
 
     .menu__link {
         font-size: 1.2rem;
@@ -1382,8 +1382,6 @@ input:focus:-ms-input-placeholder {
         color: #fff;
     }
 
-    /*конец меню мобил*/
-    /*попап мобил*/
     .promo__popup {
         width: 90vw;
         margin: 0;
@@ -1403,10 +1401,6 @@ input:focus:-ms-input-placeholder {
         padding: 5.5rem 5vw;
     }
 
-    .popup__legend {}
-
-    .popup__field {}
-
     .popup__submit {
         margin-top: 2.3rem;
     }
@@ -1415,10 +1409,6 @@ input:focus:-ms-input-placeholder {
         width: 22px;
         height: 22px;
     }
-
-    /*конец попап мобил*/
-    /*--------------------------------------- chapter mobile*/
-    .chapter__body {}
 
     .chapter__header {
         height: 5.3rem;
@@ -1452,19 +1442,15 @@ input:focus:-ms-input-placeholder {
         flex-direction: column;
         width: 100%;
         justify-content: center;
-    }
-
-    .wedding {
         background: none;
     }
+
 
     .chapter__img {
         width: 100%;
         height: 443px;
         overflow: hidden;
     }
-
-    .chapter__img::after {}
 
     .chapter__pic {
         width: 125%;
@@ -1476,22 +1462,27 @@ input:focus:-ms-input-placeholder {
     .wedding__img {
         background: url('../img/wedding.jpg') no-repeat #ffffff4d;
         background-size: cover;
+        background-position: center;
     }
 
     .celebration__img {
         background: url('../img/celebration.jpg') no-repeat #ffffff4d;
 
         background-position: center;
+        background-size: cover;
     }
 
     .composition__img {
         background: url('../img/composition.jpg') no-repeat #ffffff4d;
 
+        background-position: center;
+        background-size: cover;
     }
 
     .event__img {
         background: url('../img/event.jpg') no-repeat #ffffff4d;
-
+        background-position: center;
+        background-size: cover;
     }
 
     .chapter__description {
@@ -1509,27 +1500,13 @@ input:focus:-ms-input-placeholder {
         font-size: 1.6rem;
     }
 
-    .chapter__text {}
-
     .chapter__btn {
         margin-bottom: 4.2rem;
     }
 
-    .chapter__carousel {}
-
-    .wedding__carousel {}
-
-    .chapter__list {}
-
     .chapter__item {
         margin-right: 2rem;
     }
-
-
-
-    .wedding__item {}
-
-
 
     .chapter__footer {
         display: none;
@@ -1539,17 +1516,11 @@ input:focus:-ms-input-placeholder {
         display: flex;
     }
 
-    .chapter__more {}
-
-    .social__link {}
-
-    .social__item {}
-
-    .social__item--instagram {}
-
-    /*--------------------------------------- end chapter mobile*/
 
 }
+
+/*------------------------------------------END MEDIA CORRECTOR 767*/
+/*------------------------------------------MEDIA CORRECTOR 450*/
 
 @media (max-width: 450px) {
 
@@ -1558,4 +1529,4 @@ input:focus:-ms-input-placeholder {
     }
 }
 
-/*-------------------------------------end--мобила*/
+/*------------------------------------------END MEDIA CORRECTOR 450*/
