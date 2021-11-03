@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="slick/slick.css">
     <!--     <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +18,7 @@
     <header class="floristy__header">
         <div class="header__container">
             <div class="header__head">
-                <a href="#">
+                <a href="index.html">
                     <div class="header__logo">Весна всегда</div>
                 </a>
                 <a href="#">
@@ -27,8 +28,8 @@
             <div class="header__center">
                 <h1 class="header__title">Флористика <br>с душой</h1>
                 <button class="btn header__portfolio">Смотреть работы</button>
-                <button class="mouse header__scroll"></button>
-                <button class="arrowdown header__scroll"></button>
+                <button onclick="document.location='#mainpoint'" class="mouse header__scroll"></button>
+                <button onclick="document.location='#mainpoint'" class="arrowdown header__scroll"></button>
             </div>
             <div class="header__social">
                 <ul class="social__list">
@@ -55,14 +56,14 @@
                 </ul>
             </div>
             <div class="header__catalog ">
-                <a href="#" class="catalog header__scroll">
+                <a href="#mainpoint" class="catalog header__scroll">
                     <img class="catalog__text" src="img/lookhere.png" alt="Смотреть каталог">
                 </a>
                 <img class="catalog__arrow" src="img/arrow.svg" alt="Указатель на каталог">
             </div>
         </div>
     </header>
-    <main class="floristy__main">
+    <main class="floristy__main" id="mainpoint">
         <section class="floristy__section services">
             <h2 class="section__title services__title">Каталог услуг</h2>
             <span class="services__backtitle">Каталог услуг</span>
@@ -139,9 +140,9 @@
         </section>
         <section class="floristy__section promo">
             <div class="promo__part promo__text">
-                <h2 class="section__title promo__title">Акционные <br> предложения</h2>
+                <h2 class="section__title promo__title">Акционные предложения</h2>
                 <p class="promo__suggestion">
-                    При заказе свадебного оформления предоставляется <br> скидка на букет невесты и бутоньерку в размере 30%
+                    При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%
                 </p>
                 <button class="btn promo__request">Заказать оформление</button>
             </div>

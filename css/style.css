@@ -23,6 +23,7 @@ p {
 
 a:hover {
     cursor: pointer;
+    color: #ffffff;
 }
 
 .btn {
@@ -238,6 +239,7 @@ h2 {
 .floristy__section {
     margin: 0 auto;
     margin-bottom: 14rem;
+    padding-top: 4rem;
 }
 
 .services {
@@ -282,7 +284,7 @@ h2 {
     text-decoration: none;
     font-size: 12vw;
     letter-spacing: 0.06rem;
-    top: 0.8rem;
+    top: 6rem;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff0d;
@@ -297,7 +299,7 @@ h2 {
 
 /*CATALOG CARD START*/
 
-.services__item {}
+.services__item {/*! display: flex; */}
 
 .services__card {
     margin: 0;
@@ -319,7 +321,7 @@ h2 {
 }
 
 .services__card .card__image {
-    box-shadow: 0 0 0 8px rgba(59, 24, 30, 1.0), 0 0 0 10px transparent;
+    box-shadow: 0 0 0 8px transparent, 0 0 0 10px transparent;
 }
 
 .card__field {
@@ -400,6 +402,7 @@ h2 {
 
 .promo__title {
     margin-bottom: 2.5rem;
+    width: 40%;
 }
 
 
@@ -420,6 +423,7 @@ h2 {
     font-size: 1.2rem;
     line-height: 170%;
     margin-bottom: 4rem;
+    width: 78%;
 }
 
 .promo__request {
@@ -442,6 +446,10 @@ h2 {
     align-content: center;
 }
 
+.chapter__body .floristy__footer {
+    display: none;
+}
+
 .footer__navigation {
     width: 100%;
 }
@@ -454,7 +462,9 @@ h2 {
     margin-bottom: 3rem;
 }
 
-.navigation__point {}
+.navigation__point {
+    padding: 0 5px 0 5px;
+}
 
 .navigation__link {
     margin: 0;
@@ -513,7 +523,7 @@ h2 {
     letter-spacing: 0.06rem;
 }
 
-.header__menu a {
+.menu__link {
     margin: 0;
     padding: 0;
 
@@ -525,7 +535,7 @@ h2 {
     letter-spacing: 0.09rem;
 }
 
-.header__menu a:hover {
+.nemu__link:hover {
     color: rgba(255, 255, 255, 1);
     font-size: 3.75rem;
 }
@@ -706,20 +716,45 @@ input:focus:-ms-input-placeholder {
 .chapter {
     position: relative;
     width: 100vw;
-    height: auto;
     background-color: #3b181e;
 
     display: flex;
-    box-shadow: 0 100px 100px 100px #0007, 0 0 700px 700px #3b181edd;
     overflow: hidden;
+    /*! height: 100vh; */
 }
 
+.wedding__img {
+    background: url('../img/wedding.jpg') no-repeat #ffffff4d;
+}
+
+.celebration__img {
+    background: url('../img/celebration.jpg') no-repeat #ffffff4d;
+
+}
+
+.composition__img {
+    background: url('../img/composition.jpg') no-repeat #ffffff4d;
+
+}
+
+.event__img {
+    background: url('../img/event.jpg') no-repeat #ffffff4d;
+
+}
 
 .wedding {}
 
+.composition {}
+
+.celebration {}
+
+.event {}
+
 .chapter__img {
     position: relative;
-    height: 932px;
+
+    width: 50vw;
+    height: 100vh;
 
 }
 
@@ -731,6 +766,7 @@ input:focus:-ms-input-placeholder {
     border: 1px solid rgba(255, 255, 255, 0.2);
     height: 94%;
     width: 100%;
+    /*! z-index: 100; */
 }
 
 .chapter__header {
@@ -778,7 +814,7 @@ input:focus:-ms-input-placeholder {
 .chapter__btn {
     background-color: transparent;
     flex-grow: 0;
-    margin-bottom: 6rem;
+    margin-bottom: 6vh;
 }
 
 .chapter__list {
@@ -851,6 +887,46 @@ input:focus:-ms-input-placeholder {
 
 /*------------------------------------------коррекция десктопа*/
 @media (max-width: 1500px) {
+
+    .wedding__img {
+        background: none;
+    }
+
+    .celebration__img {
+        background: none;
+    }
+
+    .composition__img {
+        background: none;
+    }
+
+    .event__img {
+        background: none;
+    }
+
+    .wedding {
+        background: url('../img/wedding.jpg') no-repeat #ffffff4d;
+        background-size: cover;
+    }
+
+    .composition {
+        background: url('../img/composition.jpg') no-repeat #ffffff4d;
+        background-size: auto;
+        background-size: cover;
+    }
+
+    .celebration {
+        background: url('../img/celebration.jpg') no-repeat #ffffff4d;
+        background-size: auto;
+        background-size: cover;
+    }
+
+    .event {
+        background: url('../img/event.jpg') no-repeat #ffffff4d;
+        background-size: auto;
+        background-size: cover;
+    }
+
     .services__list {
         flex-direction: column;
     }
@@ -881,25 +957,131 @@ input:focus:-ms-input-placeholder {
     .slick-active button {
         background-color: rgba(255, 255, 255, 1);
     }
+
+    /*футер тоже страдает*/
+    .floristy__footer {}
+
+    .chapter__footer {
+        right: 0;
+        left: 0;
+        justify-content: center;
+    }
+
+    .footer__navigation {}
+
+    .navigation__list {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .navigation__point {
+        margin-bottom: 2rem;
+    }
+
+    .navigation__link {}
+
+    .footer__social {}
+
+    /*футер тоже страдал*/
+    /* ----------------------------and chapter */
+    .chapter {
+        flex-direction: column;
+        /*! height: 100vh; */
+    }
+
+    .chapter__img {
+        /*! width: 100vw; */
+        height: auto;
+        /*! margin-bottom: 2rem; */
+    }
+
+    .chapter__description {
+        margin: 3rem auto;
+        background-color: rgba(59, 24, 30, 0.9);
+        padding: 5rem;
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.3);
+        position: relative;
+    }
+
+    .chapter__header {
+        position: relative;
+        width: 90%;
+        margin: 2rem auto 4rem;
+    }
+
+    .chapter__header .header__logo,
+    .chapter__header .header__burger {
+        position: static;
+    }
+
+    .chapter__img::after {
+        content: none;
+    }
+
+    .composition {
+        background: url('../img/composition.jpg') no-repeat;
+        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.3);
+        /*! opacity: 0.5; */
+    }
+}
+
+/*and chapter ending*/
+
 }
 
 /*--------------------------------------end коррекция десктопа*/
 
-/*------------------------------------------еще коррекция*/
-@media (max-width: 900px) {
+/**/
+@media (max-width: 1350px) {
+    .promo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo__image {
+        order: 1;
+        margin-bottom: 2.5rem;
+        width: auto;
+    }
+
+    .promo__text {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .promo__title {
+        width: 100%;
+        align-self: center;
+    }
+
+    .promo__title::after {
+        right: 0;
+    }
+
+    .promo__suggestion {}
+}
+
+/**/
+
+/*------------------------------------------планшет*/
+@media
+
+/*(orientation: landscape) and*/
+(max-width: 900px) {
     .services {
         width: 100%;
     }
-}
 
-/*-------------------------------------end--коррекции*/
-/*------------------------------------------планшет*/
-@media (max-width: 768px) {
     .floristy__header {
         background: url(../img/headerback.jpg) no-repeat center top / cover;
         padding-top: 55px;
         padding-bottom: 115px;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
     }
 
     .header__burger {
@@ -966,10 +1148,414 @@ input:focus:-ms-input-placeholder {
 
     .services__card {}
 
+    /*футер тоже страдает*/
+    .floristy__footer {}
 
+    .footer__navigation {}
 
+    .navigation__list {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
 
+    .navigation__point {
+        margin-bottom: 2rem;
+    }
 
+    .navigation__link {}
+
+    .footer__social {}
+
+    /*футер тоже страдал*/
+    .chapter__body {
+        height: 100vh;
+    }
 }
 
 /*-------------------------------------end--планшет*/
+/*------------------------------------------мобила*/
+@media (max-width: 767px) {
+
+    .btn {
+        font-size: 0.9rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .floristy__header {
+
+        padding: 0;
+        padding-bottom: 7.5rem;
+        margin-bottom: 0;
+    }
+
+    .header__container {
+        width: 100%;
+    }
+
+    .header__head {
+        padding: 15px 30px;
+        width: auto;
+        margin: 0;
+        background-color: #3b181e;
+        z-index: 100;
+    }
+
+    .header__burger {
+        color: transparent;
+        background-position-x: right;
+    }
+
+    .header__center {
+
+        width: 100%;
+        padding-top: 8rem;
+    }
+
+    .header__title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        line-height: 140%;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    .header__portfolio {
+        margin-bottom: 8rem;
+    }
+
+    .header__social {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header__catalog {
+        display: none;
+    }
+
+    .social__list {}
+
+    .social__item {
+        width: 35px;
+        height: 35px;
+        padding: 3px;
+    }
+
+    .mouse {
+        display: none;
+    }
+
+    .arrowdown {
+        display: block;
+        background: url('../img/arrowdown.svg') no-repeat center;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        bottom: -3rem;
+    }
+
+    .services__backtitle {
+        display: none;
+    }
+
+    .services__title {
+        margin-bottom: 2.5rem;
+    }
+
+    .services__list {}
+
+    .services__card {
+        align-self: center;
+    }
+
+    .slick-dots button {
+        margin: 0 0.5rem;
+        width: 5rem;
+    }
+
+    .slick-dots {
+        justify-content: space-around;
+    }
+
+    .floristy__section {
+        margin-bottom: 8rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo__image {
+        width: 90%;
+        order: 1;
+    }
+
+    .promo__text {
+        width: 90%;
+        text-align: start;
+        align-items: flex-start;
+        order: 2;
+    }
+
+    .promo__suggestion {
+        width: 80%;
+    }
+
+    .promo__request {}
+
+    /*футер тоже страдает*/
+    .floristy__footer {
+        width: 90%;
+    }
+
+    .footer__navigation {}
+
+    .navigation__list {
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navigation__point {
+        margin-bottom: 2rem;
+    }
+
+    .navigation__link {}
+
+    .footer__social {
+        width: 100%;
+    }
+
+    .social__footer {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .slick-initialized .slick-slide {
+        display:   flex;
+    }
+
+    /*футер тоже страдал*/
+    /*стилизация меню для мобил*/
+    .header__menu {}
+
+    .menu__wrapper {
+        width: 100%;
+        padding-top: 3.5rem;
+    }
+
+    .header__logo {}
+
+    .menu__list {
+        width: 55%;
+    }
+
+    .menu__item {}
+
+    .menu__link {
+        font-size: 1.2rem;
+        line-height: normal;
+    }
+
+    .header__menu .header__social {
+        display: none;
+    }
+
+    .menu__close {
+        top: 25px;
+        right: 25px;
+    }
+
+    .menu__close svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .header__menu .header__logo {
+        font-size: 1rem;
+        margin-bottom: 6rem;
+    }
+
+    .menu__link:hover {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    /*конец меню мобил*/
+    /*попап мобил*/
+    .promo__popup {
+        width: 90vw;
+        margin: 0;
+        left: 5vw;
+        top: 5vh;
+        box-shadow: 0 0 5rem 5rem rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        height: 90vh;
+        position: fixed;
+    }
+
+    .popup__pic {
+        display: none;
+    }
+
+    .popup__form {
+        padding: 5.5rem 5vw;
+    }
+
+    .popup__legend {}
+
+    .popup__field {}
+
+    .popup__submit {
+        margin-top: 2.3rem;
+    }
+
+    .popup__close svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /*конец попап мобил*/
+    /*--------------------------------------- chapter mobile*/
+    .chapter__body {}
+
+    .chapter__header {
+        height: 5.3rem;
+        padding: 1.33rem;
+        position: relative;
+    }
+
+    .chapter__header .header__logo,
+    .chapter__header .header__burger {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .chapter__header .header__logo {
+        align-self: flex-end;
+    }
+
+    .chapter__header .header__burger {
+        padding: 0;
+        background-size: 70%;
+        background-position: center center;
+    }
+
+    .chapter__header a {
+        display: flex;
+    }
+
+    .chapter {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .wedding {
+        background: none;
+    }
+
+    .chapter__img {
+        width: 100%;
+        height: 443px;
+        overflow: hidden;
+    }
+
+    .chapter__img::after {}
+
+    .chapter__pic {
+        width: 125%;
+        left: -25%;
+        position: relative;
+        top: -10%;
+    }
+
+    .wedding__img {
+        background: url('../img/wedding.jpg') no-repeat #ffffff4d;
+        background-size: cover;
+    }
+
+    .celebration__img {
+        background: url('../img/celebration.jpg') no-repeat #ffffff4d;
+
+        background-position: center;
+    }
+
+    .composition__img {
+        background: url('../img/composition.jpg') no-repeat #ffffff4d;
+
+    }
+
+    .event__img {
+        background: url('../img/event.jpg') no-repeat #ffffff4d;
+
+    }
+
+    .chapter__description {
+        margin: 0 auto;
+        width: auto;
+        padding: 2.5rem 1.7rem;
+        box-shadow: none;
+    }
+
+    .chapter__main {
+        width: 90vw;
+    }
+
+    .chapter__title {
+        font-size: 1.6rem;
+    }
+
+    .chapter__text {}
+
+    .chapter__btn {
+        margin-bottom: 4.2rem;
+    }
+
+    .chapter__carousel {}
+
+    .wedding__carousel {}
+
+    .chapter__list {}
+
+    .chapter__item {
+        margin-right: 2rem;
+    }
+
+
+
+    .wedding__item {}
+
+
+
+    .chapter__footer {
+        display: none;
+    }
+
+    .chapter__body .floristy__footer {
+        display: flex;
+    }
+
+    .chapter__more {}
+
+    .social__link {}
+
+    .social__item {}
+
+    .social__item--instagram {}
+
+    /*--------------------------------------- end chapter mobile*/
+
+}
+
+@media (max-width: 450px) {
+
+    .chapter .slick-slide img {
+        width: 75px;
+    }
+}
+
+/*-------------------------------------end--мобила*/

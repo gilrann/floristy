@@ -41,26 +41,7 @@ $(document).ready(function() {
 
     // ---------------------------------END BURGER MENU
 
-    // ---------------------------------wedding block
-
-    // $('.wedding__start').click(function(event) {
-    //     // event.preventDefault();
-    //     // console.log("что это");
-
-    //     $('.header__menu')
-    //         .css('display', 'none')
-    //         .animate({
-    //             opacity: 0,
-    //         }, 600);
-    //     $('.wedding')
-    //         .css('display', 'flex')
-    //         .animate({
-    //             opacity: 1,
-    //         }, 600);
-
-    // });
-
-
+    // ---------------------------------chapter block
 
     $('#subburger').click(function(event) {
         //  event.preventDefault();
@@ -74,20 +55,7 @@ $(document).ready(function() {
             }, 600);
     });
 
-    // $('.header__logo').click(function(event) {
-    //     // event.preventDefault();
-    //     // console.log("что это");
-
-    //     $('.wedding')
-    //         .css('display', 'none')
-    //         .animate({
-    //             opacity: 0,
-    //         }, 200);
-
-    // });
-
-
-    // ---------------------------------END wedding block
+    // ---------------------------------END chapter block
 
     // ---------------------------------popup block
 
@@ -119,24 +87,30 @@ $(document).ready(function() {
     // ---------------------------------END popup block
 
 
-    // мышеклик
-    $(".header__scroll").click(function() {
-        event.preventDefault();
-        console.log("что это");
-        $("html, body").animate({ scrollTop: $(".header__head").height() + 932 }, "slow");
 
-        return false;
-    });
-    // конец мышеклика
 
     // каруселька
-    $(document).ready(function() {
-        $('.chapter__list').slick({
-            infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-        });
+
+    $('.chapter__list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        mobileFirst: false,
+        responsive: [
+
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                    centerMode: false,
+                    variableWidth: true,
+                    slidesToShow: 4
+                }
+            }
+
+        ]
     });
+
     // конец карусельки
 
     // каруселька каталога
@@ -145,16 +119,34 @@ $(document).ready(function() {
         arrows: false,
         dots: true,
 
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        // variableWidth: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         mobileFirst: true,
-        responsive: [{
-            breakpoint: 1500,
-            settings: 'unslick'
-        }]
+
+        responsive: [
+
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerMode: false
+                }
+            }, {
+                breakpoint: 1500,
+                settings: 'unslick'
+            }
+
+        ]
+
     });
     // конец карусельки каталога
+
+
+
+
+
+
 
 
 });
